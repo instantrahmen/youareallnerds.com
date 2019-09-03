@@ -16,6 +16,8 @@ If you have any ideas to improve it, feel free to submit a PR. 💙
   usage: `www.youareallnerds.com/?gay=1`
 - **customBg:** Use any custom background you want. Supports css backgrounds.  
   usage: `www.youareanerd.com?customBg=rgb(10, 142, 69)`
+- **customSpeed:** The time it takes for a single spin of the TsukiDab emote in milliseconds (ex: 600ms) or seconds (ex: 2s)
+  usage: `www.youareanerd.com?customSpeed=200ms`
 
 ## Passing multiple parameters
 

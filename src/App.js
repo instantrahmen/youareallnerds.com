@@ -8,12 +8,20 @@ import Footer from './components/Footer';
 import { useUrlParams } from './hooks/useUrlParams';
 
 const App = () => {
-  const [name, customMessage, gay, customBg, hideFooter] = useUrlParams([
+  const [
+    name,
+    customMessage,
+    gay,
+    customBg,
+    hideFooter,
+    customSpeed,
+  ] = useUrlParams([
     'name',
     'customMessage',
     'gay',
     'customBg',
     'hideFooter',
+    'customSpeed',
   ]);
   const [message, setMessage] = useState(null);
 
@@ -39,10 +47,10 @@ const App = () => {
       <div className="App">
         <header className="App-header">
           <div className="message-container">
-            <img
+            <AppLogo
               src="https://cdn.discordapp.com/emojis/584873667440279560.png?v=1"
-              className="App-logo"
-              alt="logo"
+              alt="Spinning TsukiDab emote"
+              speed={customSpeed || '1s'}
             />
             <p>{message}</p>
           </div>
@@ -54,3 +62,9 @@ const App = () => {
 };
 
 export default App;
+
+const AppLogo = styled.img`
+  animation: ${({ speed = '1s' }) => `App-logo-spin infinite ${speed} linear`};
+  height: 40vmin;
+  pointer-events: none;
+`;
