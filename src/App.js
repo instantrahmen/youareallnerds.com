@@ -3,6 +3,8 @@ import styled, { createGlobalStyle } from 'styled-components';
 import logo from './logo.svg';
 
 import GlobalStyle from './components/GlobalStyle';
+import Footer from './components/Footer';
+
 import { useUrlParams } from './hooks/useUrlParams';
 
 const App = () => {
@@ -44,31 +46,7 @@ const App = () => {
             <p>{message}</p>
           </div>
         </header>
-        <footer
-          style={{
-            position: 'fixed',
-            bottom: 0,
-            left: 0,
-            color: 'white',
-            width: '100vw',
-            textAlign: 'center',
-          }}
-        >
-          💚 💚 💚 💚 💚 💚 Please follow/subscribe to Tsukimoon on{' '}
-          <a href="https://twitch.tv/tsukimoonvr">Twitch</a> and{' '}
-          <a href="http://twitter.com/tsukimoonVR">Twitter</a>. Seriously. Do
-          it. Tsuki is great! 💚 💚 💚 💚 💚 💚
-          <br />
-          💙Created by <a href="http://twitter.com/myrahmen">
-            instantRahmen
-          </a>{' '}
-          (I'm sorry)💙
-          <br />
-          💙Credit to the amazing{' '}
-          <a href="https://twitter.com/TragicVr">Tragic</a> for the cute
-          artwork! (commissioned for Tsuki, used with Tsuki's permission) Follow
-          her, too! She's super adorable and nice!💙
-        </footer>
+        <Footer />
       </div>
     </>
   );
