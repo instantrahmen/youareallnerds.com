@@ -8,11 +8,12 @@ import Footer from './components/Footer';
 import { useUrlParams } from './hooks/useUrlParams';
 
 const App = () => {
-  const [name, customMessage, gay, customBg] = useUrlParams([
+  const [name, customMessage, gay, customBg, hideFooter] = useUrlParams([
     'name',
     'customMessage',
     'gay',
     'customBg',
+    'hideFooter',
   ]);
   const [message, setMessage] = useState(null);
 
@@ -46,7 +47,7 @@ const App = () => {
             <p>{message}</p>
           </div>
         </header>
-        <Footer />
+        {!hideFooter && <Footer />}
       </div>
     </>
   );
